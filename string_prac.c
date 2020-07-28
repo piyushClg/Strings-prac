@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
 int main()
 {
         
     int d, i, j, n=0, len, position, length, c = 0;;
-    char a[40], b[40], temp;
+    char a[40], b[40], p[40], temp;
     
     puts("\nEnter first string: ");
     gets(a);
@@ -41,14 +42,18 @@ int main()
                 break;
             
             case 2: //Copy a string
+                
                 for(i=0; i<a[i] != '\0'; i++)
                     b[i] = a[i];
                 
-                printf("\n");
+                printf("\nYour copied string is: ");
                 puts(b);
                 break;
             
             case 3: //Reverse a string
+                
+                for(i=0; i<a[i] != '\0'; i++)
+                    p[i] = a[i];
                 i = 0;
                 j = strlen(a) - 1;
                  
@@ -60,7 +65,9 @@ int main()
                     j--;
                    }
  
-                printf("\nReverse string is :%s", a);
+                printf("\nReverse string is :%s\n", a);
+                for(i=0; i<p[i] != '\0'; i++)
+                    a[i] = p[i];
                 break;
                     
             case 4: //palindrome
@@ -77,6 +84,7 @@ int main()
                 }
                 else 
                     printf("%s is a palindrome", a);
+                printf("\n");
                 break;
             
             case 5: //Substring
@@ -93,6 +101,7 @@ int main()
                 break;
             
             case 6:
+                printf("Thank you for using :)");
                 exit(0);
             
             default:
